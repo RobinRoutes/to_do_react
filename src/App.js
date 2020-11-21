@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
+// Importing the components 
+import Form from "./components/Form"
+import TodoList from "./components/TodoList"
 
 function App() {
+	const [inputText, setInputText] = useState('');
 	return (
 		<div className="App">
 			<header>
@@ -9,6 +13,8 @@ function App() {
 					My Todo List
 				</h1>
 			</header>
+			<Form />
+			<TodoList />
 		</div>
 	);
 }
